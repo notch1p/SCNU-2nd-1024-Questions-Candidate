@@ -68,9 +68,11 @@ html[lang]::before {
 
 
 
-## Q3: JPG-RAR Merge "Duality"
+## Q3: Picture-RAR Merge "Duality"
 
+原理：由于rar文件的头部不需要在bytestream的开头，这使得我们能将图片文件的区块放在文件首部，而rar文件放在其后。图片查看器读入时会忽略后部rar文件bytestream，将其作为损坏区块；而rar程序读取时直接可读到其头部，确保了文件在两种情况下都能打开。
 
+简介：
 
 
 
