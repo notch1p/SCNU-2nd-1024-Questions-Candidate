@@ -54,7 +54,7 @@ html[lang]::before {
 
 从左到右，三种颜色分别为 `#002654 #ffffff #ce1226`
 
-则字符串应该为`011b42ffffffc0001d`
+则字符串应该为`002654ffffffce1226`
 
 **注意**：
 
@@ -72,7 +72,22 @@ html[lang]::before {
 
 原理：由于rar文件的头部不需要在bytestream的开头，这使得我们能将图片文件的区块放在文件首部，而rar文件放在其后。图片查看器读入时会忽略后部rar文件bytestream，将其作为损坏区块；而rar程序读取时直接可读到其头部，确保了文件在两种情况下都能打开。
 
-简介：
+简介：仅给出一张图片，答题者应该想到改扩展名为.rar打开压缩文件得到字符串。
 
+**注意** 为了增加难度，我们为压缩包里添加二进制文件，其中隐藏字符串，同时字符串使用base64加密，应通过hexdump(直接用text editor打开亦可)得到加密后的字符串并解密
 
+## Example:  Kotonoha Akane "琴葉　茜"
 
+![3sabi_akane_C](./assets/3sabi_akane_C.png)
+
+<center>Open the picture in rar format.</center> 
+
+![image-20220926085749772](./assets/image-20220926085749772.png)
+
+<center>Find the flag.</center>
+
+## 题面
+
+> 直接上图 [Akane](./assets/3sabi_akane_C.png)
+
+附记：参考了去年的12题。
