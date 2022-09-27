@@ -74,11 +74,13 @@ html[lang]::before {
 
 简介：仅给出一张图片，答题者应该想到改扩展名为.rar打开压缩文件得到字符串。
 
-**注意** 为了增加难度，我们为压缩包里添加二进制文件，其中隐藏字符串，同时字符串使用base64加密，应通过hexdump(直接用text editor打开亦可)得到加密后的字符串并解密
+**注意** 为了增加难度，我们为压缩包里添加二进制文件，其中隐藏字符串，同时字符串使用base64加密，应通过hexdump(直接用text editor打开亦可)得到加密后的字符串并解密。
+
+
 
 ## Example:  Kotonoha Akane "琴葉　茜"
 
-![3sabi_akane_C](./assets/3sabi_akane_C.png)
+![3sabi_akane_C](./assets/akane.png)
 
 <center>Open the picture in rar format.</center> 
 
@@ -91,3 +93,48 @@ html[lang]::before {
 > 直接上图 [Akane](./assets/3sabi_akane_C.png)
 
 附记：参考了去年的12题。
+
+
+
+## Q4: DP Problem "Longest Common Subsequence"
+
+### 原理：状态转移方程（递推公式）
+
+$$
+LCS(X_i\space,\space Y_j) = \begin{cases}Empty\space while\space i = 0 \space or\space j = 0\\
+LCS(X_i,Y_j)=LCS(X_{i-1},Y_{j-1})+1\space while\space X_i = Y_j\\max\{LCS(X_{i-1},Y_{j}),LCS(X_i,Y_{j-1})\}\space while\space X_i \neq Y_j\end{cases}
+$$
+
+
+
+简介：给出两个序列，求其公共最大子列。经典题不必多说。本题需要通过 数组 $LCS(X_i\space,\space Y_j)$ 重构出最长子序列。得到的序列即为所求字符串。
+
+序列预先给出：长度为128+=flag
+
+`flag=aecaeddebbdbaaaedececcedabccdcbacedaebdabcbcaaddbdabbeedaeacbdeddaabeaabdcabbabbacbbdddaecaeceeeeacedabceddedebbcabbbebbdbabddcc`
+
+`flag=baebeebbbbabaedbecbcddcedacdbddaaecdddacdcabecbbeeadcbcecdcbbddabcecadbddedcbcdbbcbbbeceebaeedaeabeaedcacbddbcbdcaebcbeaadaeabca`
+
+### 答案(One Possible Ver.)
+
+以下答案由我给出，复杂度为$O(nm)$，Auxiliary Space $O(nm)$，没有进行滚动数组优化。
+
+![image-20220927100450063](./assets/image-20220927100450063.png)
+
+所求字符串为 `flag=aeeebbbaaedecccedacdbdaedaccabbbeeacbeddabeabdcbbbcbbeceeeeaeabeedcabbbebbdabc`
+
+## 题面
+
+设计情景，隐晦的提示答题者往LCS的方向思考。
+
+> Akatuki十分热爱计算机文化，10月24号这天她参加了IJN举办的解谜游戏大赛。但是她在第一题就被难住了：题目要求在下面两列字串找出flag{}. 作为一名淑女，代码是不可能写的，请你帮她解决这个问题。
+>
+> Str1 =  `flag=aecaeddebbdbaaaedececcedabccdcbacedaebdabcbcaaddbdabbeedaeacbdeddaabeaabdcabbabbacbbdddaecaeceeeeacedabceddedebbcabbbebbdbabddcc`
+>
+> Str2 =  `flag=baebeebbbbabaedbecbcddcedacdbddaaecdddacdcabecbbeeadcbcecdcbbddabcecadbddedcbcdbbcbbbeceebaeedaeabeaedcacbddbcbdcaebcbeaadaeabca`
+
+
+
+## Q5: Sharingan "写輪眼"
+
+简介：在由点和三位数构成的随机数表中找出合法的IP地址。
