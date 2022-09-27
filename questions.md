@@ -46,7 +46,7 @@ html[lang]::before {
 
 简介：放置多张排成一排的纯色图片(native实现亦可)，答题者通过拾色器得到对应的Hex Code， 按从左到右的顺序连接每个颜色对应的编号作为字符串。
 
-## Examples: France Flag
+## Example: France Flag
 
 ![Flag_of_France_(1794–1815,_1830–1974,_2020–present)](./assets/Flag_of_France_(1794–1815,_1830–1974,_2020–present).svg)
 
