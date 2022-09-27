@@ -80,7 +80,7 @@ html[lang]::before {
 
 ## Example:  Kotonoha Akane "琴葉　茜"
 
-![3sabi_akane_C](./assets/akane.png)
+![3sabi_akane_C](./assets/Akane.png)
 
 <center>Open the picture in rar format.</center> 
 
