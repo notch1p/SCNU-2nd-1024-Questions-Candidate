@@ -82,7 +82,7 @@ html[lang]::before {
 
 ![3sabi_akane_C](./assets/Akane.png)
 
-<center>Open the picture in rar format.</center> 
+<center>Open the picture in rar format. 注：图片路径<code>./assets/Akane.png</code></center> 
 
 ![image-20220926085749772](./assets/image-20220926085749772.png)
 
@@ -176,7 +176,7 @@ def randIP(n):
 
 > Gensōkyō是地球上一处无人涉足的秘境，传说其中住着一位强大的妖怪老婆婆。许多人都曾尝试探访她，但其人行踪诡秘，任何人都不知道她的去向。只知她最后一次为人所知时留下了一张字条: [address.txt](./assets/address.txt), 你能够找到她的足迹吗？
 >
-> (此处为提示) flag = {City}       在题面上加一个下载address.txt的入口
+> (此处为提示) flag = {City}       在题面上加一个下载address.txt的入口   **注**：address.txt的路径为`./assets/address.txt`
 
 考虑到本题 flag 的特殊性，应该为本题加上提交次数限制，以三次为佳，防止蒙题者。
 本题参考了去年的11题。
