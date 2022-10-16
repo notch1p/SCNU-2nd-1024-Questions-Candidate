@@ -64,7 +64,7 @@ html[lang]::before {
 
 ## 题面
 
-> sRGB in #RRGGBB (这其实提示的十分明显了，可以删一点。)
+> Get all `{Color}`
 
 
 
@@ -84,13 +84,13 @@ html[lang]::before {
 
 <center>Open the picture in rar format. 注：图片路径<code>./assets/Akane.png</code></center> 
 
-![image-20220926085749772](./assets/image-20220926085749772.png)
+![image-20221016204349357](./assets/image-20221016204349357.png)
 
 <center>Find the flag.</center>
 
 ## 题面
 
-> 直接上图 [Akane](./assets/3sabi_akane_C.png)
+> more than just an image.
 
 附记：参考了去年的12题。
 
@@ -101,8 +101,9 @@ html[lang]::before {
 ### 原理：状态转移方程（递推公式）
 
 $$
-LCS(X_i\space,\space Y_j) = \begin{cases}Empty\space while\space i = 0 \space or\space j = 0\\
-LCS(X_i,Y_j)=LCS(X_{i-1},Y_{j-1})+1\space while\space X_i = Y_j\\max\{LCS(X_{i-1},Y_{j}),LCS(X_i,Y_{j-1})\}\space while\space X_i \neq Y_j\end{cases}
+LCS(X_i, Y_j) = \begin{cases}Empty\space while\space i = 0 \space or\space j = 0
+\\LCS(X_i,Y_j)=LCS(X_{i-1},Y_{j-1})+1\space while\space X_i = Y_j
+\\max\{LCS(X_{i-1},Y_{j}),LCS(X_i,Y_{j-1})\}\space while\space X_i \neq Y_j\end{cases}
 $$
 
 
@@ -127,11 +128,17 @@ $$
 
 设计情景，隐晦的提示答题者往LCS的方向思考。
 
-> Akatuki十分热爱计算机文化，10月24号这天她参加了IJN举办的解谜游戏大赛。但是她在第一题就被难住了：题目要求在下面两列字串找出flag{}. 作为一名淑女，代码是不可能写的，请你帮她解决这个问题。
+**注** 题目中一些关键词以汉语可以轻易地让人有思路。改为英文，可以增加陌生感，增加难度。
+
+> Akatuki finds Computer Science an interesting topic to learn. On 24th Oct. She will be participating in the puzzle game held by IJN. Unfortunately, she cannot even pass the first level. Which, requires her to find the most common feature of these two strings below. However as an *lady*, an elegant female, surely it cannot be possible for Akatuki to code. Would you like to help her solve this problem?
 >
 > Str1 =  `flag=aecaeddebbdbaaaedececcedabccdcbacedaebdabcbcaaddbdabbeedaeacbdeddaabeaabdcabbabbacbbdddaecaeceeeeacedabceddedebbcabbbebbdbabddcc`
 >
 > Str2 =  `flag=baebeebbbbabaedbecbcddcedacdbddaaecdddacdcabecbbeeadcbcecdcbbddabcecadbddedcbcdbbcbbbeceebaeedaeabeaedcacbddbcbdcaebcbeaadaeabca`
+
+中文翻译：
+
+> Akatuki十分热爱计算机文化，10月24号这天她参加了IJN举办的解谜游戏大赛。但是她在第一题就被难住了：题目要求在下面两列字串找出找出它们最具共性之处。作为一名淑女，代码是不可能写的，请你帮她解决这个问题。
 
 
 
