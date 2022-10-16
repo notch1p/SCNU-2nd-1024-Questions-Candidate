@@ -108,7 +108,7 @@ max\\{LCS(X_{i-1},Y_{j}),LCS(X_i,Y_{j-1})\\}\space while\space X_i \neq Y_j
 \end{cases}
 $$
 
-
+*Note that the typora latex gammar to some degree differs from the github one.*
 
 简介：给出两个序列，求其公共最大子列。经典题不必多说。本题需要通过 数组 $LCS(X_i\space,\space Y_j)$ 重构出最长子序列。得到的序列即为所求字符串。
 
