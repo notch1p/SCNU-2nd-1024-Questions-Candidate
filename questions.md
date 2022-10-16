@@ -101,9 +101,9 @@ html[lang]::before {
 ### 原理：状态转移方程（递推公式）
 
 $$
-LCS(X_i, Y_j) = \begin{cases}Empty\space while\space i = 0 \space or\space j = 0
-\\LCS(X_i,Y_j)=LCS(X_{i-1},Y_{j-1})+1\space while\space X_i = Y_j
-\\max\{LCS(X_{i-1},Y_{j}),LCS(X_i,Y_{j-1})\}\space while\space X_i \neq Y_j\end{cases}
+LCS(X_i\space,\space Y_j) = \begin{cases}Empty\space while\space i = 0 \space or\space j = 0\\
+LCS(X_i,Y_j)=LCS(X_{i-1},Y_{j-1})+1\space while\space X_i = Y_j\\
+max\{LCS(X_{i-1},Y_{j}),LCS(X_i,Y_{j-1})\}\space while\space X_i \neq Y_j\end{cases}
 $$
 
 
