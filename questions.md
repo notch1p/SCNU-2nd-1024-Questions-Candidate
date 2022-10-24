@@ -222,6 +222,11 @@ def randIP(n):
 ((2[0-4]\d|25[0-5]|[1]\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)
 ```
 
+One liner:
+```shell
+cat address.txt | grep -E '((2[0-4]\d|25[0-5]|[1]\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)'
+```
+
 过滤出的字符串即为`104.156.244.232`
 
 查得这个IP属地为 `Miami` (Broadcasted,Anycast disabled).  **注** 数据来源 Maxmind IPIP IP2Location
