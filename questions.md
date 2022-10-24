@@ -126,6 +126,53 @@ $$
 
 所求字符串为 `flag=aeeebbbaaedecccedacdbdaedaccabbbeeacbeddabeabdcbbbcbbeceeeeaeabeedcabbbebbdabc`
 
+**注意**
+本题LCS不唯一，需要SPJ. 以下给出SPJ代码.
+
+**credit goes to lr580**
+```cpp
+signed main(int argc, char *argv[])
+{
+    registerTestlibCmd(argc, argv);
+    string useless = inf.readString();
+    string a = "aecaeddebbdbaaaedececcedabccdcbacedaebdabcbcaaddbdabbeedaeacbdeddaabeaabdcabbabbacbbdddaecaeceeeeacedabceddedebbcabbbebbdbabddcc";
+    string b = "baebeebbbbabaedbecbcddcedacdbddaaecdddacdcabecbbeeadcbcecdcbbddabcecadbddedcbcdbbcbbbeceebaeedaeabeaedcacbddbcbdcaebcbeaadaeabca";
+    string lcs = ouf.readString();
+    string lcs_ans = ans.readString();
+    if (lcs.size() != lcs_ans.size())
+    {
+        quitf(_wa, "your answer is not longest");
+    }
+    else
+    {
+        auto check = [&](string a, string s)
+        {
+            int tot = s.size(), cnt = 0;
+            for (auto c : a)
+            {
+                if (c == s[cnt])
+                {
+                    ++cnt;
+                    if (cnt == tot)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+        if (!check(a, lcs) || !check(b, lcs))
+        {
+            quitf(_wa, "your answer is not the subsequence of a or b");
+        }
+        else
+        {
+            quitf(_ok, "ac");
+        }
+    }
+}
+```
+
 ## 题面
 
 设计情景，隐晦的提示答题者往LCS的方向思考。
