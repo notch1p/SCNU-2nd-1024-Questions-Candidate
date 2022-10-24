@@ -120,7 +120,7 @@ $$
 
 ### 答案(One Possible Ver.)
 
-以下答案由我给出，复杂度为$O(nm)$，Auxiliary Space $O(nm)$，没有进行滚动数组优化。
+以下答案由我给出，复杂度为 $O(nm)$，Auxiliary Space $O(nm)$，没有进行滚动数组优化。
 
 ![image-20220927100450063](./assets/image-20220927100450063.png)
 
